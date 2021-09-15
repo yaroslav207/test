@@ -31,7 +31,7 @@ body {
 .search-wrapper__input {
     flex: 1 1 100%;
     border: 2px solid #acacac;
-    height: 30px;
+    height: 38px;
     border-radius: 5px;
     background-image: url("./images/search.png");
     background-position: 5px center;
@@ -44,7 +44,7 @@ body {
     background-color: #8cbf55;
     color: #ffffff;
     border: none;
-    height: 30px;
+    height: 38px;
     border-radius: 5px;
 }
 
