@@ -47,6 +47,10 @@ body {
     border-radius: 5px;
 }
 
+.menu-wrapper {
+    padding: 15px 50px;
+}
+
 .menu__item {
     display: inline-block;
     margin-right: 10px;
@@ -57,12 +61,14 @@ body {
 }
 
 .menu__item label {
-    padding: 10px 20px;
+    padding: 8px 20px;
     background-color: #f1f1f1;
     color: #656565;
     border: none;
-    height: 30px;
+    height: 35px;
     border-radius: 5px;
+    display: block;
+    font-size: 18px;
 }
 
 .menu__item input[type=radio]:checked + label {
@@ -118,7 +124,6 @@ body {
         height: 0;
         display: block;
         padding: 0;
-        font-size: 18px;
     }
 
     .menu__item input[type=radio]:checked + label,
