@@ -1,0 +1,149 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #dcdcdc;
+    padding: 30px;
+    font-family: Arial, sans-serif;
+}
+
+.wrapper {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 30px;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
+
+.search-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.search-wrapper__form {
+    display: flex;
+    gap: 30px;
+}
+
+.search-wrapper__input {
+    flex: 1 1 100%;
+    border: 2px solid #acacac;
+    height: 30px;
+    border-radius: 5px;
+    background-image: url("./images/search.png");
+    background-position: 5px center;
+    background-repeat: no-repeat;
+    background-size: 15px;
+}
+
+.search-wrapper__button {
+    padding: 0 20px;
+    background-color: #8cbf55;
+    color: #ffffff;
+    border: none;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.menu__item {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.menu__item input[type=radio] {
+    display: none;
+}
+
+.menu__item label {
+    padding: 10px 20px;
+    background-color: #f1f1f1;
+    color: #656565;
+    border: none;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.menu__item input[type=radio]:checked + label {
+    background: #8cbf55;
+    color: #ffffff;
+}
+
+.article-wrapper__title {
+    color: #8cbf55;
+    font-size: 24px;
+}
+
+.article-wrapper__text {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    -webkit-column-gap: 80px;
+    -moz-column-gap: 80px;
+    column-gap: 80px;
+    column-rule: 2px solid #8cbf55;
+    padding-left: 18px;
+    font-size: 16px;
+    color: #939393;
+}
+
+@media all and (max-width: 800px) {
+    .menu-wrapper {
+        display: flex;
+        justify-content: center;
+    }
+    .menu {
+        display: flex;
+        flex-direction: column;
+        background-color: #f1f1f1;
+        border-radius: 5px;
+    }
+
+    .menu__item {
+        margin: 0;
+        color: #000000;
+    }
+
+    .menu__item input[type=radio] {
+        display: none;
+    }
+
+    .menu__item label {
+        background-color: transparent;
+        visibility: hidden;
+        position: relative;
+        height: 0;
+        display: block;
+        padding: 0;
+        font-size: 18px;
+    }
+
+    .menu__item input[type=radio]:checked + label,
+    .menu:focus-within .menu__item > label {
+        visibility: visible;
+        height: auto;
+        padding: 10px 10px 10px 40px;
+        background-color: transparent;
+        color: #656565;
+    }
+
+    .menu__item input[type=radio]:checked + label {
+        background-image: url("./images/burger-menu-icon.png");
+        background-position: 10px center;
+        background-repeat: no-repeat;
+    }
+
+    .menu:focus-within .menu__item input[type=radio]:checked + label {
+        background-image: url("./images/arrow.png");
+        background-position: 10px center;
+        background-repeat: no-repeat;
+    }
+
+    .article-wrapper__text {
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
+    }
+}
